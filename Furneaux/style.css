@@ -1,0 +1,183 @@
+body {
+  font-family: roboto;
+  /* good range for body copy is 14 px to 20 px
+Una buea medida para las fuentes del body, es usar
+un tamaño de entre ( 12 si la fuente sse deja)
+14px y 16px
+16px es el sweet spot.
+  */
+  font-size: 16px;
+  /*line height will be equal to 24 px (16*1.5)
+line-height: 1.5;*/
+  color: #47353A;
+}
+
+header {
+  max-height: 30px;
+  padding: 10px 15px;
+  background-color: white;
+  /*
+cuando tienes flow casi siempre tienes over-flow
+este comando overflow- le dice al header que vea que tinee adentro y respete
+el padding de los elementos, en este caso header h1 y header nav
+
+-when we float elements inside of our header, they are take outside the regular box overflow
+as a result our header colapses to get our heaade to have its propper hight again,
+we can use overflow hidden  as tick to get it working
+*/
+  overflow: hidden;
+}
+
+header h1 {
+  float: left;
+  margin-top: -4px;
+}
+
+header nav {
+  float: right;
+  margin-top: 6px;
+}
+
+header nav a {
+  color: #47353A;
+  text-decoration: none;
+  margin-left: 20px;
+  /*con text transform puedes pasar de mayusculas a minusculas etc*/
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.hero {
+  background-image: url(assets/hero.jpg);
+  background-size: cover;
+  padding-top: 230px;
+  padding-bottom: 200px;
+  /* here we position our background image on
+the x and the y axis
+right hand edge on the right hand edge of our box
+center vertically */
+  background-position: right center;
+}
+
+.hero div {
+  /* Esto hace que el div se mantenga en el
+  centro de la pagina*/
+  max-width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+  /* estos margenes de abajo se pone para que
+  cuando se haga mobile le de espacio a las letras y
+   no esten todas juntas y pegadas */
+  padding-right: 20px;
+  padding-left: 20px;
+  text-align: center;
+}
+
+.hero h2 {
+  font-family: DavidLibre-Regular;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 1;
+  margin-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero p {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.flowers {
+  overflow: hidden;
+}
+
+.flowers img {
+  float: left;
+  /*by usig a percentage width, our images will now be fluid in relation
+     to the size of their container */
+  width: 33.333%
+}
+
+.quotes {
+  overflow: hidden;
+}
+
+.quotes div {
+  width: 45%;
+  float: left;
+  text-align: center;
+  padding: 50px 20px 40px 20px;
+}
+
+.cream-background {
+  background-color: #f7f1ee;
+}
+
+/* Border radius es para darle redondez a
+las esquinas de los elemenros con css
+al ponerlo en porcentaje convierte las fotos de avatars cuadradas en
+circulos perfectos*/
+.quotes img {
+  width: 75px;
+  border-radius: 100%
+}
+
+.quotes blockquote {
+  font-family: DavidLibre;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.15;
+   max-width: 400px;
+  /* La razon por la que usamos margun left y righ auto
+es por que text align center no funciona en elementos
+solo funciona en texto e imagen*/
+  margin: 15px auto 5px auto;
+}
+
+.chair{
+  /* here we over ride the background image, position and padding frim our .hero
+  class above ( which is also on the element)*/
+  background-image: url(assets/full-bleed.jpg);
+  background-position: center bottom;
+  padding: 0;
+  height: 500px;
+}
+
+.logos{
+background-color: #EEAE9F;
+padding: 20px 20px 35px 20px;
+text-align: center;
+}
+
+.logos p {
+  color:white;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.logos img {
+  /*en vez de usar margin left 44
+  preferi dividirlo en dos de cada lado dandole 22 a cada uno*/
+  margin-left: 22px;
+  margin-right: 22px;
+}
+
+footer{
+  background-color:#47353A;
+  padding: 25px 30px;
+  overflow: hidden;
+}
+footer img {
+  float: left;
+}
+
+footer p{
+  float: right;
+  font-family: monospace;
+  font-size: 14px;
+  color: #ccc9ca;
+  font-weight:50;
+
+}
